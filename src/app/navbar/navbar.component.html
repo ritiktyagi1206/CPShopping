@@ -1,0 +1,116 @@
+    <!-- <nav>
+    <div class="wrapper">
+      <div class="btn menu-btn" (click)="toggleMenu()">
+        <i class="ri-menu-line"></i>
+      </div>
+      <div class="logo">
+        <img src="CPLogo.png" alt="Logo">
+      </div>
+      <ul class="nav-links" [class.active]="isMenuActive">
+        <li>
+          <a>Tech</a>
+          <div class="dropdown">
+            <ul>
+              <li>
+                <img class="dropdown-img" src="Laptop.jpg" alt="Laptops">
+                <a href="#">Laptops</a>
+              </li>
+              <li>
+                <img class="dropdown-img" src="Mobile.jpg" alt="Phones">
+                <a href="#">Phones</a>
+              </li>
+              <li>
+                <img class="dropdown-img" src="Accessories.jpg" alt="Accessories">
+                <a href="#">Accessories</a>
+              </li>
+            </ul>
+          </div>
+          <img src="Tech.avif" alt="Tech">
+        </li>
+        <li>
+          <a href="#">Wearables</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="#">Smartwatches</a></li>
+              <li><a href="#">Fitness Bands</a></li>
+            </ul>
+          </div>
+          <img src="Wearables.avif" alt="Wearables">
+        </li>
+        <li>
+          <a href="#">Giftings</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="#">Corporate</a></li>
+              <li><a href="#">Personal</a></li>
+            </ul>
+          </div>
+          <img src="Giftings.avif" alt="Giftings">
+        </li>
+        <li>
+          <a href="#">New Arrivals</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="#">Trending</a></li>
+              <li><a href="#">Recently Launched</a></li>
+            </ul>
+          </div>
+          <img src="NewArrival.avif" alt="New Arrivals">
+        </li>
+      </ul>
+      <div class="profile">
+        <label class="btn profile-btn cart">
+          <i class="ri-shopping-cart-line"></i>
+        </label>
+        <label class="btn profile-btn user">
+          <i class="ri-user-line"></i>
+        </label>
+        <label class="btn profile-btn search">
+          <i class="ri-search-line"></i>
+        </label>
+      </div>
+    </div>
+  </nav>
+  -->
+
+  <nav>
+    <div class="wrapper">
+      <div class="btn menu-btn" (click)="toggleMenu()">
+        <i class="ri-menu-line"></i>
+      </div>
+      <div class="logo" (click)="navigateTo('home')">
+        <img src="CPLogo.png" alt="Logo" />
+      </div>
+      <ul class="nav-links" [class.active]="isMenuActive">
+        <li *ngFor="let item of navItems">
+          <a (click)="navigateTo(item.link)">{{ item.label }}</a>
+          <div class="dropdown" *ngIf="item.dropdown?.length">
+            <ul>
+              <li *ngFor="let dropdownItem of item.dropdown">
+                <img
+                  *ngIf="dropdownItem.imgSrc"
+                  [src]="dropdownItem.imgSrc"
+                  [alt]="dropdownItem.label"
+                  class="dropdown-img"
+                />
+                <a [href]="dropdownItem.link">{{ dropdownItem.label }}</a>
+              </li>
+            </ul>
+          </div>
+          <img [src]="item.imgSrc" [alt]="item.label" />
+        </li>
+      </ul>
+      <div class="profile">
+        <label class="btn profile-btn cart">
+          <i class="ri-shopping-cart-line"></i>
+        </label>
+        <label (click)="navigateTo('profile')" class="btn profile-btn user">
+          <i class="ri-user-line"></i>
+        </label>
+        <label (click)="navigateTo('search')" class="btn profile-btn search">
+          <i class="ri-search-line"></i>
+        </label>
+      </div>
+    </div>
+  </nav>
+  

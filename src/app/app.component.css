@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+*{
+  font-family: "Roboto Condensed", sans-serif;
+}
+.content{
+    margin-top: 70px;
+}

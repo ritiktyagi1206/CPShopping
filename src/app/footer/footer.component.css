@@ -1,0 +1,355 @@
+.footer {
+    position: relative; 
+    bottom: 0;
+    border-top: 2px solid #cccaca;
+    background-color: #ffffff;
+    height:600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .offerings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20%;
+    gap: 80px; 
+}
+
+.footer .offerings .service {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.footer .offerings .service img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer .offerings .service span {
+    font-size: 14px;
+}
+
+.footer .content {
+    background-color: #fafafa;
+    display: flex;
+    flex: 1; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer .content .search{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+}
+.footer .content .search .text{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer .content .search .text h4{
+    font-size: 16px;
+}
+
+.footer .content .search .form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer .content .search .form input{
+    padding: 12px;
+    width: 50%;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #d4d4d4;
+    font-family: Roboto Regular, sans-serif;
+}
+
+.footer .email-input:focus{
+    outline: none;
+    border: 1px solid gray;
+    border-width: 1px;
+}
+
+.footer .content .search .form button{
+    padding: 10px;
+    width: 20%;
+    font-size: 17px;
+    margin-left: 8px;
+    border: none;
+    color: #ffffff;
+    background-color: #20a87e;
+    cursor: pointer;
+}
+
+.footer .content .search .form button:hover{
+    border: none;
+    color: #ffffff;
+    background-color: #1f9670;
+}
+
+.footer  .list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    gap: 20px;
+}
+
+
+.footer .list h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.footer .list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .list ul li {
+    margin-bottom: 5px;
+
+}
+
+.footer .list ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.footer .list ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo-section {
+    flex: 1;
+    text-align: left;
+    display: flex;
+}
+
+.logo {
+    height: 60px;
+    margin-top: 8px;
+}
+
+.social-section {
+    flex: 1;
+    text-align: center;
+}
+
+.social-section h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons a img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+.app-section {
+    flex: 1;
+    text-align: right;
+}
+
+.app-section h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.app-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.app-icons a img {
+    width: 120px;
+    height: auto;
+}
+
+.company{
+    display: flex;
+    background-color: #000;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.company .name{
+    font-size: 13px;
+}
+
+.company .policy{
+    font-size: 13px;
+}
+
+.company .policy ul{
+    display: flex;
+    list-style: none;
+}
+
+.company .policy li{
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.company .policy li:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 721px) {
+    
+    .footer .offerings {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 20%;
+        gap: 50px; 
+    }
+
+    .footer .offerings .service {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .footer .content {
+        background-color: #fafafa;
+        display: flex;
+        flex-direction: column;
+        flex: 1; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer .content .search{
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .footer .content .search h4{
+        margin-left: 15px;
+    }
+    .footer .content .search .form button{
+        width: 30%;
+    }
+    .footer .content  .list{
+        margin-top: 10px;
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        gap: 60px;
+    }
+    .container{
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+    .container .logo-section{
+        display: none;
+    }
+
+    .social-icons {
+        gap: 30px;
+    }
+
+    .company{
+        padding: 20px 20px;
+    }
+
+    .company .policy ul{
+     margin-left: -50px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1001px){
+
+    .footer .offerings {
+        min-height: 20%;
+        gap: 80px; 
+    }
+
+
+    .footer .content .search .form button{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 721px){
+
+    .footer .offerings {
+        min-height: 20%;
+        gap: 80px; 
+    }
+
+    .footer .content .search{
+        padding-left: 20px;
+    }
+    .footer .content .search .form input{
+        width: 65%;
+    }
+    .footer .content .search .form button{
+        width: 33%;
+    }
+
+}
+
+ @media screen and (max-width: 400px) {
+
+    .footer .content .search .form button{
+        width: 33%;
+    }
+
+} 

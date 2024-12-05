@@ -1,0 +1,28 @@
+<!-- 
+<div class="main">
+    <div class="container">
+        <label>Search</label>
+        <input type="text">
+        <button 
+    class="clear-button" 
+    onclick="clearInput()">&#10005;</button>
+    </div>
+</div> -->
+
+<div class="main">
+    <div class="container">
+      <label [class.focused]="isFocused || searchQuery">Search</label>
+      <input
+        type="text"
+        [(ngModel)]="searchQuery"
+        (focus)="isFocused = true"
+        (blur)="isFocused = !!searchQuery"
+      />
+      <button class="clear-button" (click)="clearInput()">&#10005;</button>
+    </div>
+
+    <div class="search-result">
+        <div>Not found</div>
+    </div>
+</div>
+  
