@@ -2,3 +2,10 @@
 <div class="content">
   <router-outlet></router-outlet>
 </div>
+
+<button 
+  class="scroll-to-top" 
+  *ngIf="showScrollButton" 
+  (click)="scrollToTop()">
+  ↑
+</button>
