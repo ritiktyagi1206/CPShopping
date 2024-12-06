@@ -37,7 +37,7 @@ nav .wrapper{
 
 .wrapper .logo img{
   height: 50px;
-  width: 100%;
+  width: 180px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -104,7 +104,7 @@ nav .wrapper{
 .dropdown ul li a {
   color: #3A3B3C;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   padding: 5px 10px;
   transition: all 0.3s ease;
@@ -126,7 +126,7 @@ nav .wrapper{
 .nav-links li a{
   color: #3A3B3C;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   padding: 0px 15px;
   border-radius: 5px;
@@ -248,7 +248,7 @@ nav .wrapper{
     .wrapper .nav-links li a {
         flex-grow: 1;
         padding: 10px 20px;
-        font-size: 18px;
+        font-size: 15px;
         text-align: left;
         cursor: pointer;
         display: inline-block;

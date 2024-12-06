@@ -5,3 +5,36 @@
 .content{
     margin-top: 70px;
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: 160px;
+  right: 130px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid #1f9670;
+  color: black;
+  border-radius: 50%; /* Makes it a perfect circle */
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.scroll-to-top:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width:780px) {
+
+  .scroll-to-top {
+    bottom: 100px;
+    right: 50px;
+  }
+  
+}
+
+
