@@ -1,40 +1,9 @@
-<!-- <div class="main">
-    <div class="product-category">
-        <h1>Wearables</h1>
-    </div>
-    <div class="products">
-        <a href="#" class="product-item">
-            <img src="product1.avif" alt="Smartwatch">
-            <p>Smartwatch</p>
-        </a>
-        <a href="#" class="product-item">
-            <img src="product2.avif" alt="Fitness Tracker">
-            <p>Fitness Tracker</p>
-        </a>
-        <a href="#" class="product-item">
-            <img src="product3.avif" alt="Smart Glasses">
-            <p>Smart Glasses</p>
-        </a>
-        <a href="#" class="product-item">
-            <img src="product1.avif" alt="Smart Jewelry">
-            <p>Smart Jewelry</p>
-        </a>
-        <a href="#" class="product-item">
-            <img src="product2.avif" alt="VR Headset">
-            <p>VR Headset</p>
-        </a>
-        <a href="#" class="product-item">
-            <img src="product3.avif" alt="Pet Wearables">
-            <p>Pet Wearables</p>
-        </a>
-    </div>        
-</div> -->
-<div class="main-container">
+<!-- <div class="main-container">
     <h1 class="desktop-ccp-header">Wearables</h1>
     <hr />
     
     <div class="ccp-items">
-        <a class="product-item">
+        <a class="product-item"(click)="navigateTo('items')">
             <div class="item-details">
               <img
                 class="circle-style-image"
@@ -44,7 +13,7 @@
               <p class="list-title">Product 1</p>
             </div>
           </a>
-          <a class="product-item">
+          <a class="product-item" (click)="navigateTo('items')">
             <div class="item-details">
               <img
                 class="circle-style-image"
@@ -54,7 +23,7 @@
               <p class="list-title">Product 2</p>
             </div>
           </a>
-          <a class="product-item">
+          <a class="product-item" (click)="navigateTo('items')">
             <div class="item-details">
               <img
                 class="circle-style-image"
@@ -69,4 +38,28 @@
    
   </div>
 
+   -->
+
+
+   <div class="main-container">
+    <h1 class="desktop-ccp-header">Wearables</h1>
+    <hr />
+  
+    <div class="ccp-items">
+      <a 
+        class="product-item" 
+        *ngFor="let product of products" 
+        (click)="navigateTo(product.route)"
+      >
+        <div class="item-details">
+          <img
+            class="circle-style-image"
+            [src]="product.image"
+            [alt]="product.name"
+          />
+          <p class="list-title">{{ product.name }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
   

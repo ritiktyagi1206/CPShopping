@@ -1,0 +1,22 @@
+<div class="main-container">
+    <h1 class="desktop-ccp-header">Products</h1>
+    <hr style="border: none;" />
+    
+    <div class="ccp-items">
+        <div class="product-grid">
+            <div *ngFor="let product of products" class="product-card" (click)="navigateTo('item')">
+              <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+              <div class="product-details">
+                <span class="product-name">{{ product.name }}</span>
+                <p class="product-price">Rs. {{ product.price }}</p>
+                <p class="product-offer" *ngIf="product.offer">{{ product.offer }}</p>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+  
+   
+  </div>
+
+  
