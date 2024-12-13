@@ -13,6 +13,17 @@ export class NavbarComponent {
   constructor(private router: Router , private elRef: ElementRef, private renderer: Renderer2) {}
   navItems = [
     {
+      label: 'Wearables',
+      imgSrc: 'Wearables.avif',
+      link: 'products',
+      dropdown: [
+        { label: 'Watches', imgSrc: 'Laptop.jpg', link: '#' },
+        { label: 'Mobile Stickers', imgSrc: 'Laptop.jpg', link: '#' },
+        { label: 'NFC Rings', imgSrc: 'Laptop.jpg', link: '#' },
+        { label: 'Key Rings', imgSrc: 'Laptop.jpg', link: '#' },
+      ],
+    },
+    {
       label: 'Tech',
       imgSrc: 'Tech.avif',
       link: 'products',
@@ -20,15 +31,6 @@ export class NavbarComponent {
         { label: 'Laptops', imgSrc: 'Laptop.jpg', link: '#' },
         { label: 'Phones', imgSrc: 'Mobile.jpg', link: '#' },
         { label: 'Accessories', imgSrc: 'Accessories.jpg', link: '#' },
-      ],
-    },
-    {
-      label: 'Wearables',
-      imgSrc: 'Wearables.avif',
-      link: 'products',
-      dropdown: [
-        { label: 'Smartwatches', imgSrc: 'Laptop.jpg', link: '#' },
-        { label: 'Fitness Bands', imgSrc: 'Laptop.jpg', link: '#' },
       ],
     },
     {

@@ -1,0 +1,122 @@
+<div class="product-container">
+    <!-- Image Slider -->
+    <div class="image-slider">
+      <div class="slider-wrapper">
+        <img *ngFor="let image of images; let i = index" 
+             [src]="image" 
+             [class.active]="i === activeIndex" 
+             class="slider-image" />
+      </div>
+      <button class="prev" (click)="prevSlide()">&#10094;</button>
+      <button class="next" (click)="nextSlide()">&#10095;</button>
+    </div>
+  
+    <!-- Product Details -->
+    <div class="product-details">
+        <div class="details">
+            <span class="product-name">Black Milanese Loop 2.0 Apple WatchBand (42/44/45/46/49mm)</span>
+            <p class="price" style="font-weight: 500;">
+                Rs. 1499 <span class="original-price">1999</span> <span style="font-size: 14px; margin-left: 10px; font-weight: 400;">(Inclusive of all taxes)</span>
+            </p>
+            <div class="options">
+                <div class="colors">
+                  <h4>COLOR</h4>
+                  <div class="color-options">
+                    <div class="color" *ngFor="let color of colors" 
+                         [class.active]="selectedColor === color" 
+                         [style.backgroundColor]="color" 
+                         (click)="selectColor(color)">
+                    </div>
+                  </div>
+                </div>
+                <div class="sizes">
+                  <h4 style="margin-top: 20px;">SIZE</h4>
+                  <div class="size-options">
+                    <button *ngFor="let size of sizes" 
+                            [class.active]="selectedSize === size" 
+                            (click)="selectSize(size)">
+                      {{ size }}
+                    </button>
+                  </div>
+                </div>
+                <div class="bankselection">
+                    <div class="dropdown">
+                        <button class="dropdown-button" (click)="toggleDropdown()">
+                            {{ selectedBank || 'Select Bank' }}
+                            <span class="dropdown-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                        </button>
+                        <ul class="dropdown-menu" [class.show]="isDropdownOpen">
+                            <li *ngFor="let bank of banks" (click)="selectBank(bank)">
+                                {{ bank }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+                <button class="add-to-cart">Add to Cart</button>
+              <div class="offers" style="margin-top: 10px;">
+                <h4 style="color: #e66b55;">Exciting Offers</h4>
+                <ul>
+                  <li>
+                    <img class="offericon" src="coupons.avif" alt="Offers">
+                    BUY 2 &#64; 1899</li>
+                  <li>
+                    <img class="offericon" src="coupons.avif" alt="Offers">
+                    Free Duffle Bag on all orders above Rs.3499</li>
+                </ul>
+              </div>
+              <hr style="color: #c5c5c5;">
+              <div class="gift-option">
+                <img class="giftbox" style="width: 20px;" src="gift-box.avif" alt="Offers">
+                <span style="font-size: 15px;">Make it a Gift</span>
+              </div>
+              <div class="pincode-checker">
+                <input type="text" placeholder="Enter Pincode to Check Delivery" />
+                <button>Check</button>
+              </div>
+        </div>
+        
+    </div>
+  </div>
+
+  <div class="product-info">
+
+    <div class="product-details" style="display: flex; align-items: center;">
+        <div class="info">
+            <h1>A POWERFUL FITNESS PARTNER</h1>
+            <p style="font-weight: 400; font-size: 16px;">
+                Measure all the ways you move with Activity Rings, which are customisable to match your lifestyle
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="single-image">
+        <div class="image-wrapper">
+            <img src="Image4.jpg" alt="Product Image" class="desc-image" />
+        </div>
+    </div>
+</div>
+
+<div class="product-info row-reverse">
+    
+    <div class="product-details" style="display: flex; align-items: center;">
+        <div class="info">
+            <h1>ADVANCED HEALTH INSIGHTS</h1>
+            <p style="font-weight: 400;">
+                Take an ECG anytime. Get notifications if you have high or low heart rate or an irregular heart rhythm.
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="single-image">
+        <div class="image-wrapper">
+            <img src="Image5.jpg" alt="Product Image" class="desc-image" />
+        </div>
+    </div>
+
+    
+</div>
+
+<app-footer></app-footer>

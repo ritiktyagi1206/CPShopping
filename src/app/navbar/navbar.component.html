@@ -93,7 +93,7 @@
                   [alt]="dropdownItem.label"
                   class="dropdown-img"
                 />
-                <a [href]="dropdownItem.link">{{ dropdownItem.label }}</a>
+                <a>{{ dropdownItem.label }}</a>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@
         </li>
       </ul>
       <div class="profile">
-        <label class="btn profile-btn cart">
+        <label (click)="navigateTo('cart')" class="btn profile-btn cart">
           <i class="ri-shopping-cart-line"></i>
         </label>
         <label (click)="navigateTo('profile')" class="btn profile-btn user">
